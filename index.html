@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Local stylesheet, JS, etc. -->
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>All Abooooaaaarrrd!</h1>
+            <h2>Don't Miss Your Train!</h2>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title" id="currentTime">Current Train Schedule</h3>
+            </div>
+            <table class="table table-striped active">
+                <tHead>
+                    <!-- <tr> -->
+                        <th><strong>Train Name</strong></th>
+                        <th><strong>Destination</strong></th>
+                        <th><strong>Frequency (min)</strong></th>
+                        <th><strong>Next Arrival</strong></th>
+                        <th><strong>Time Remaining</strong></th>
+                        <th><strong>Edit</strong></th>
+                        <th><strong>Remove</strong></th>
+                    <!-- </tr> -->
+                </tHead>
+                <tbody id="train-table">
+                </tbody>
+            </table>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add a Train</h3>
+            </div>
+            <form class="panel-body">
+                <label for="inptTrainName">Train Name</label>
+                <input type="text" class="form-control" id="inptTrainName" placeholder="My Train" required>
+                <label for="inptDestination">Destination</label>
+                <input type="text" class="form-control" id="inptDestination" placeholder="New York" required>
+                <label for="inptFirstTime">First Train Time</label>
+                <input type="time" class="form-control" id="inptFirstTime" value="16:00:00">
+                <div class="form-group">
+                    <label for="inptFreq">Frequency (min)</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="inptFreq" min=1 required value=15>
+                        <span class="input-group-btn">
+                            <button id="btnAddTrain" class="btn btn-default btn-primary" type="submit">Add Train</button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
