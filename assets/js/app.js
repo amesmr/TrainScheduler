@@ -162,7 +162,7 @@ $(document).ready(function() {
         var id = $(this).attr("id");
         var idLen = id.length;
         id.split("");
-        // console.log(id[idLen - 1]);
+        // console.log(id[idLen - 1]); 
 
         // get the data from the train array into currentTrain object
         currentTrain = trainArry["train" + id[idLen - 1]];
