@@ -10,6 +10,8 @@ function initPage() {
     // start the timers to update the data (clock, arrival times, etc.)
     var parsed = JSON.parse(localStorage.getItem("trains")) || {};
     var keys = Object.keys(parsed);
+    console.log(keys);
+    console.log(parsed);
     // empty object
     if (parsed[keys[0]].name == undefined) {
         return false;
